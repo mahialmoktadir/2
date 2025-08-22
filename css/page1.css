@@ -1,0 +1,68 @@
+#page1 {
+    background-image: url("../img/page1background.jpg");
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
+
+.page1_mid {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40%;
+    margin-left: 10%;
+    color: white;
+    background: transparent;
+    background-color: transparent;
+
+}
+
+#mahi-text {
+    background-color: transparent;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0px;
+}
+
+#moktadir-text {
+    background-color: transparent;
+    font-size: 6vh;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#web-text {
+    font-size: 2rem;
+    background-color: transparent;
+    color: blueviolet;
+    letter-spacing: 10px;
+}
+
+.btn {
+    background-color: transparent;
+    display: flex;
+    gap: 10%;
+    margin-top: 5%;
+    margin-left: 0%;
+    
+}
+.btnText {
+    color: white;
+    padding: 10px 35px;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 17px;
+    box-shadow: 0px 0px 30px blueviolet, 0px 0px 20px blueviolet;
+    border-color: blueviolet;
+    border-radius: 40px;
+    cursor: pointer;
+    transition-duration: .2;
+    transition-timing-function: ease-in;
+}
+:hover.btnText{
+    box-shadow: 0px 0px 30px rgb(132, 0, 255), 0px 0px 20px rgb(65, 19, 109);
+    border-color: blueviolet;
+    color: rgb(146, 146, 146);
+    font-size: 15px;
+}

@@ -1,0 +1,54 @@
+* {
+    padding: 0px;
+    margin: 0;
+    background-color: rgb(26, 26, 26);
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: left;
+    justify-self: center;
+    height: vh;
+    width: 95%;
+    gap: 20px;
+    position: absolute;
+    background-color: transparent;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+
+.navbarText {
+    text-align: center;
+    padding: 5px;
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+    /* transition-property: none; */
+}
+
+.navbarText:first-child {
+    color: rgb(132, 0, 255);
+}
+
+.logo {
+    position: absolute;
+    background-color: transparent;
+    right: 10%;
+    font-size: 22px;
+    color: rgb(132, 0, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+
+:hover.navbarText {
+    color: rgb(163, 163, 163);
+    font-size: 17px;
+}
+
+:hover.navbarText:first-child {
+    color: rgb(79, 0, 152);
+}
