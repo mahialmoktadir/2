@@ -18,27 +18,72 @@
 
 }
 
+
 #mahi-text {
     background-color: transparent;
     font-size: 3rem;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0px;
+    animation: mahi;
+    animation-duration: .7s;
+    animation-timing-function: ease-in;
 }
-
+@keyframes mahi {
+    from {
+        opacity: 0;
+        transform: translateX(-200px) scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
 #moktadir-text {
     background-color: transparent;
     font-size: 6vh;
     font-weight: 900;
     font-family: Arial, Helvetica, sans-serif;
+    animation-name: moktadir;
+    animation-duration: .7s;
+    animation-timing-function: ease-in-out;
 }
-
+@keyframes moktadir {
+    from {
+        opacity: 0;
+        transform: translateX(300px) scale(1);
+    }
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
 #web-text {
     font-size: 2rem;
     background-color: transparent;
     color: blueviolet;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
+    /* border-right: 2px solid white; */
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    /* animation: typing 1s steps(14),
+     cursor .4 step-end infinite alternate; */
+     /* animation-name: typing ;
+     animation-duration: 1s;
+     animation-timing-function: steps(13);
+     animation-name: cursor;
+     animation-duration: .4;
+     animation-timing-function: step-end;
+     animation-iteration-count: infinite; */
+     animation:
+        typing 1s steps(13);
 }
-
+@keyframes cursor {
+    50% {border-color: transparent;}
+}
+@keyframes typing {
+    from { width: 0 }
+}
 .btn {
     background-color: transparent;
     display: flex;
@@ -47,6 +92,7 @@
     margin-left: 0%;
     
 }
+
 .btnText {
     color: white;
     padding: 10px 35px;
@@ -59,10 +105,94 @@
     cursor: pointer;
     transition-duration: .2;
     transition-timing-function: ease-in;
+    animation: btn .9s ease-in;
 }
-:hover.btnText{
+@keyframes btn {
+    from{
+        box-shadow: none;
+        
+    }
+}
+:hover.btnText {
     box-shadow: 0px 0px 30px rgb(132, 0, 255), 0px 0px 20px rgb(65, 19, 109);
     border-color: blueviolet;
     color: rgb(146, 146, 146);
     font-size: 15px;
+}
+
+
+.page1_icon {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: center;
+    position: relative;
+    top: 40%;
+    left: 90%;
+    list-style: none;
+    animation: page1_icon 1s ease-in;
+}
+@keyframes page1_icon {
+    from{
+        opacity: 0;
+        transform: translateX(199px) scale(1);
+    }
+    
+}
+.page1_icon a {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blueviolet;
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 50%;
+    color: #e2e2e2;
+    box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 2), 2px 2px 5px rgba(0, 0, 0, 2) ;
+    transition: 0.5s;
+}
+
+.page1_icon a:hover {
+    color: #999;
+    transform: translateX(-20px);
+    box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 2), 24px 0px 10px rgba(0, 0, 0, .5) ;
+}
+
+.page1_icon a::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+}
+
+
+@media screen and (max-width: 480px) {
+   .page1_mid {
+            position: absolute;
+            top: 20%;
+        }
+
+    .page1_icon {
+        display: flex;
+        gap: 5px;
+        flex-direction: row;
+        position: absolute;
+        left: 45%;
+        top: 60%;
+    }
+    .page1_icon a {
+        margin: 0px;
+    }
+    .page1_icon a:hover {
+    color: #999;
+    transform: translateY(-20px);
+    box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 2), 2px 24px 10px rgba(0, 0, 0, 1) ;
+}
 }
