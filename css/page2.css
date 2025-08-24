@@ -43,6 +43,8 @@
 .page2textaria p {
     text-align: left;
     font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 3px;
     padding: 5px;
     margin-top: 8%;
 }
